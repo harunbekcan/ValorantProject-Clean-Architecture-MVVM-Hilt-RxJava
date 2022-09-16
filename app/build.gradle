@@ -62,4 +62,18 @@ dependencies {
     implementation "com.google.dagger:hilt-android:$hiltVersion"
     kapt "com.google.dagger:hilt-android-compiler:$hiltVersion"
     kapt "androidx.hilt:hilt-compiler:1.0.0"
+
+    //Glide
+    def glideVersion = "4.13.2"
+    implementation "com.github.bumptech.glide:glide:$glideVersion"
+    kapt "com.github.bumptech.glide:compiler:$glideVersion"
+
+    // Android Util
+    implementation "com.blankj:utilcodex:1.30.6"
+
+    //Navigation
+    def navigation = "2.6.0-alpha01"
+    implementation "androidx.navigation:navigation-runtime-ktx:$navigation"
+    implementation "androidx.navigation:navigation-fragment-ktx:$navigation"
+    implementation "androidx.navigation:navigation-ui-ktx:$navigation"
 }
