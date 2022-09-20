@@ -5,11 +5,8 @@
     app:startDestination="@id/nav_agents">
 
     <include app:graph="@navigation/nav_agents" />
-
     <include app:graph="@navigation/nav_maps" />
-
     <include app:graph="@navigation/nav_weapons" />
-
     <include app:graph="@navigation/nav_tiers" />
 
 </navigation>
