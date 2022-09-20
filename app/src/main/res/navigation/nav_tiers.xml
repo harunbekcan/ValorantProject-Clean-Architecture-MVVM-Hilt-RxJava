@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/nav_tiers">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_tiers"
+    app:startDestination="@id/tiersFragment">
 
+    <fragment
+        android:id="@+id/tiersFragment"
+        android:name="com.harunbekcan.valorantproject.ui.fragment.TiersFragment"
+        android:label="fragment_tiers"
+        tools:layout="@layout/fragment_tiers" />
 </navigation>
