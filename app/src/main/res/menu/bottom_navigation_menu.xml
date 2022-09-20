@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_agents"
+        android:icon="@drawable/agents_selector"
+        android:title="@string/agents" />
+
+    <item
+        android:id="@+id/nav_maps"
+        android:icon="@drawable/maps_selector"
+        android:title="@string/maps" />
+
+    <item
+        android:id="@+id/nav_weapons"
+        android:icon="@drawable/weapons_selector"
+        android:title="@string/weapons" />
+
+    <item
+        android:id="@+id/nav_tiers"
+        android:icon="@drawable/tiers_selector"
+        android:title="@string/tiers" />
+
+</menu>
