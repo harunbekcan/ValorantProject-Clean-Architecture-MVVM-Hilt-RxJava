@@ -1,4 +1,4 @@
 package com.harunbekcan.valorantproject.di
 
-object AppModule {
+object RepositoryModule {
 }
