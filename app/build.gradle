@@ -57,6 +57,11 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.9.1'
     implementation 'com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.3'
 
+    //rx-java
+    implementation 'io.reactivex.rxjava3:rxandroid:3.0.0'
+    implementation 'io.reactivex.rxjava3:rxjava:3.0.7'
+    implementation 'com.squareup.retrofit2:adapter-rxjava3:2.9.0'
+
     //Hilt
     def hiltVersion = "2.43.2"
     implementation "com.google.dagger:hilt-android:$hiltVersion"
