@@ -11,10 +11,10 @@ abstract class BaseUseCase<T> {
     private val compositeDisposable = CompositeDisposable()
     private var disposable: Disposable? = null
 
-    internal abstract fun buildUseCaseSingle(): Single<T>
+    internal abstract fun buildUseCaseSingle(): Single<Any>
 
     fun execute(
-        onSuccess: ((t: T) -> Unit),
+        onSuccess: ((t: Any) -> Unit),
         onError: ((t: Throwable) -> Unit),
         onFinished: () -> Unit = {}
     ) {
