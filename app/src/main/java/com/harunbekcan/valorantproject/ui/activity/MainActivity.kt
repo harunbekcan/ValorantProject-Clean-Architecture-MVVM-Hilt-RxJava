@@ -19,5 +19,4 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.navHostFragment) as NavHostFragment
         NavigationUI.setupWithNavController(binding.bottomNavigationView,navHostFragment.navController)
     }
-
 }
