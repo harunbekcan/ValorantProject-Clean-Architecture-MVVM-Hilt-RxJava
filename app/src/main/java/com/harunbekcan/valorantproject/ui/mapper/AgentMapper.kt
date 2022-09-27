@@ -13,6 +13,7 @@ open class AgentMapper {
         agentAdapterList.clear()
         addAgentItem(agentResponse)
     }
+
     private fun agentResponseConvertToModel(agentResponseItem: AgentResponseItem): AgentItem {
         return AgentItem().apply {
             agentResponseItem.abilities?.let { abilities-> this.abilities = abilities }
@@ -24,6 +25,7 @@ open class AgentMapper {
             agentResponseItem.uuid?.let { uuid-> this.uuid = uuid }
         }
     }
+
     private fun addAgentItem(agentResponse: AgentResponse){
         agentResponse.agentList.forEach { response ->
             val agentItem = agentResponseConvertToModel(response)
