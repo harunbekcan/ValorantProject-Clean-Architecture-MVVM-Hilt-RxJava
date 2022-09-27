@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/weaponsFragment"
-        android:name="com.harunbekcan.valorantproject.ui.fragment.WeaponsFragment"
+        android:name="com.harunbekcan.valorantproject.ui.fragment.weapons.WeaponsFragment"
         android:label="fragment_weapons"
         tools:layout="@layout/fragment_weapons" />
 </navigation>

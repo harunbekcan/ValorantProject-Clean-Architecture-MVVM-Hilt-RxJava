@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/mapsFragment"
-        android:name="com.harunbekcan.valorantproject.ui.fragment.MapsFragment"
+        android:name="com.harunbekcan.valorantproject.ui.fragment.maps.MapsFragment"
         android:label="fragment_maps"
         tools:layout="@layout/fragment_maps" />
 </navigation>

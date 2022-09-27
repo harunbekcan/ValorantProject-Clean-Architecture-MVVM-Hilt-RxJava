@@ -1,4 +1,4 @@
-package com.harunbekcan.valorantproject.ui.fragment
+package com.harunbekcan.valorantproject.ui.fragment.agent
 
 import android.os.Bundle
 import com.harunbekcan.valorantproject.R

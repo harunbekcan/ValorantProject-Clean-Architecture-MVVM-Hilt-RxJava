@@ -6,6 +6,6 @@
 
     <fragment
         android:id="@+id/agentsFragment"
-        android:name="com.harunbekcan.valorantproject.ui.fragment.AgentsFragment"
+        android:name="com.harunbekcan.valorantproject.ui.fragment.agent.AgentsFragment"
         android:label="AgentsFragment" />
 </navigation>
