@@ -9,7 +9,7 @@ open class AgentMapper {
     private var agentAdapterList = arrayListOf<AgentItem>()
     fun getAgentAdapterList() = agentAdapterList
 
-    fun mapOnCampaignsResponse(agentResponse: AgentResponse){
+    fun mapOnAgentResponse(agentResponse: AgentResponse){
         agentAdapterList.clear()
         addAgentItem(agentResponse)
     }
