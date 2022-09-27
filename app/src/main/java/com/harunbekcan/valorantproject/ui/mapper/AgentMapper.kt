@@ -26,7 +26,7 @@ open class AgentMapper {
         }
     }
 
-    private fun addAgentItem(agentResponse: AgentResponse){
+    private fun addAgentItem(agentResponse: AgentResponse) {
         agentResponse.agentList.forEach { response ->
             val agentItem = agentResponseConvertToModel(response)
             agentAdapterList.add(agentItem)

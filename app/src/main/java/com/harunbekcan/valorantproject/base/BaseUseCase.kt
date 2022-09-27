@@ -6,15 +6,15 @@ import io.reactivex.rxjava3.disposables.CompositeDisposable
 import io.reactivex.rxjava3.disposables.Disposable
 import io.reactivex.rxjava3.schedulers.Schedulers
 
-abstract class BaseUseCase<T> {
+abstract class BaseUseCase<T : Any> {
 
     private val compositeDisposable = CompositeDisposable()
     private var disposable: Disposable? = null
 
-    internal abstract fun buildUseCaseSingle(): Single<Any>
+    internal abstract fun buildUseCaseSingle(): Single<T>
 
     fun execute(
-        onSuccess: ((t: Any) -> Unit),
+        onSuccess: ((t: T) -> Unit),
         onError: ((t: Throwable) -> Unit),
         onFinished: () -> Unit = {}
     ) {
