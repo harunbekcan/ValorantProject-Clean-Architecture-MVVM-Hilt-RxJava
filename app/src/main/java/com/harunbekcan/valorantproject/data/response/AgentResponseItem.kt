@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName
 
 data class AgentResponseItem(
     @SerializedName("abilities")
-    val abilities: List<Ability>,
+    val abilities: List<Ability>?,
     @SerializedName("assetPath")
     val assetPath: String,
     @SerializedName("background")
@@ -16,15 +16,15 @@ data class AgentResponseItem(
     @SerializedName("characterTags")
     val characterTags: Any,
     @SerializedName("description")
-    val description: String,
+    val description: String?,
     @SerializedName("developerName")
     val developerName: String,
     @SerializedName("displayIcon")
-    val displayIcon: String,
+    val displayIcon: String?,
     @SerializedName("displayIconSmall")
     val displayIconSmall: String,
     @SerializedName("displayName")
-    val displayName: String,
+    val displayName: String?,
     @SerializedName("fullPortrait")
     val fullPortrait: String,
     @SerializedName("fullPortraitV2")
@@ -40,9 +40,9 @@ data class AgentResponseItem(
     @SerializedName("killfeedPortrait")
     val killFeedPortrait: String,
     @SerializedName("role")
-    val role: Role,
+    val role: Role?,
     @SerializedName("uuid")
-    val uuid: String,
+    val uuid: String?,
     @SerializedName("voiceLine")
     val voiceLine: VoiceLine
 )

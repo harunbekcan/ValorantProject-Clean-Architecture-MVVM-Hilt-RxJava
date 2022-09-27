@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName
 
 data class AgentResponse(
     @SerializedName("data")
-    val data: List<AgentResponseItem>,
+    val agentList: List<AgentResponseItem>,
     @SerializedName("status")
     val status: Int
 )
