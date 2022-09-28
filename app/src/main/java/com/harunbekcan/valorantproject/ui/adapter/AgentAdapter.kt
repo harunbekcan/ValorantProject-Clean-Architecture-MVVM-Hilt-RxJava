@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.harunbekcan.valorantproject.data.uimodel.AgentItem
 import com.harunbekcan.valorantproject.databinding.ItemAgentLayoutBinding
 
-class AgentAdapter(val agentAdapterList : ArrayList<AgentItem>):RecyclerView.Adapter<AgentAdapter.AgentViewHolder>() {
+class AgentAdapter(private val agentAdapterList : ArrayList<AgentItem>):RecyclerView.Adapter<AgentAdapter.AgentViewHolder>() {
 
     class AgentViewHolder(val binding: ItemAgentLayoutBinding):RecyclerView.ViewHolder(binding.root)
 

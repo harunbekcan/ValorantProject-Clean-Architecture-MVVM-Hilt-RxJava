@@ -3,8 +3,9 @@ package com.harunbekcan.valorantproject.ui.mapper
 import com.harunbekcan.valorantproject.data.response.AgentResponse
 import com.harunbekcan.valorantproject.data.response.AgentResponseItem
 import com.harunbekcan.valorantproject.data.uimodel.AgentItem
+import javax.inject.Inject
 
-open class AgentMapper {
+open class AgentMapper @Inject constructor() {
 
     private var agentAdapterList = ArrayList<AgentItem>()
     fun getAgentAdapterList() = agentAdapterList

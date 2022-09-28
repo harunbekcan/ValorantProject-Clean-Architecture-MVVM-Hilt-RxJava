@@ -15,6 +15,8 @@
             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
             android:orientation="vertical"
             app:spanCount="2"
+            android:clipToPadding="false"
+            android:paddingBottom="16dp"
             tools:listitem="@layout/item_agent_layout"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

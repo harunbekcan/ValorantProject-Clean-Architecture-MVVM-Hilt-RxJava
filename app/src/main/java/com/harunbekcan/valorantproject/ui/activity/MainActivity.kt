@@ -6,7 +6,9 @@ import androidx.navigation.ui.NavigationUI
 import com.harunbekcan.valorantproject.R
 import com.harunbekcan.valorantproject.base.BaseActivity
 import com.harunbekcan.valorantproject.databinding.ActivityMainBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : BaseActivity<ActivityMainBinding>() {
 
     override fun getLayoutId(): Int = R.layout.activity_main

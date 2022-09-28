@@ -6,7 +6,9 @@ import com.harunbekcan.valorantproject.R
 import com.harunbekcan.valorantproject.base.BaseFragment
 import com.harunbekcan.valorantproject.databinding.FragmentAgentsBinding
 import com.harunbekcan.valorantproject.ui.adapter.AgentAdapter
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class AgentsFragment : BaseFragment<FragmentAgentsBinding>() {
 
     private lateinit var agentAdapter : AgentAdapter
@@ -15,11 +17,19 @@ class AgentsFragment : BaseFragment<FragmentAgentsBinding>() {
     override fun getLayoutId(): Int = R.layout.fragment_agents
 
     override fun prepareView(savedInstanceState: Bundle?) {
-        initAdapter()
+        viewModel.agentRequest()
+        initAgentResponseObserve()
     }
 
     private fun initAdapter(){
         agentAdapter = AgentAdapter(viewModel.getAgentAdapterList())
         binding.agentRecyclerView.adapter = agentAdapter
+    }
+
+    private fun initAgentResponseObserve(){
+        viewModel.agentResponseObserve.observe(viewLifecycleOwner){
+            initAdapter()
+            viewModel.mapOnAgentResponse(it)
+        }
     }
 }
