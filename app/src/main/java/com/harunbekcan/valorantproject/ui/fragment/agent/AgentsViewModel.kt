@@ -30,5 +30,6 @@ class AgentsViewModel @Inject constructor(
     }
 
     fun getAgentAdapterList() = agentMapper.getAgentAdapterList()
+
     fun mapOnAgentResponse(agentResponse: AgentResponse) = agentMapper.mapOnAgentResponse(agentResponse)
 }

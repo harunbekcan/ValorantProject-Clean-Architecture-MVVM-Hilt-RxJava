@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.harunbekcan.valorantproject.data.uimodel.AgentItem
 import com.harunbekcan.valorantproject.databinding.ItemAgentLayoutBinding
+import com.harunbekcan.valorantproject.utils.loadImage
 
 class AgentAdapter(private val agentAdapterList : ArrayList<AgentItem>):RecyclerView.Adapter<AgentAdapter.AgentViewHolder>() {
 
@@ -18,6 +19,7 @@ class AgentAdapter(private val agentAdapterList : ArrayList<AgentItem>):Recycler
     override fun onBindViewHolder(holder: AgentViewHolder, position: Int) {
         holder.binding.apply {
             agentNameTextView.text = agentAdapterList[position].displayName
+            agentImageView.loadImage(agentAdapterList[position].displayIcon)
         }
     }
 

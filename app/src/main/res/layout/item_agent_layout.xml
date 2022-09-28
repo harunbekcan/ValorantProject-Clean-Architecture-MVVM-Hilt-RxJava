@@ -4,9 +4,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
 <androidx.cardview.widget.CardView
-    android:layout_width="160dp"
-    android:layout_height="200dp"
-    android:layout_marginStart="16dp"
+    android:layout_width="140dp"
+    android:layout_height="180dp"
+    android:layout_marginStart="32dp"
     android:layout_marginTop="20dp"
     app:cardCornerRadius="8dp">
 
@@ -20,9 +20,10 @@
             android:id="@+id/agentImageView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:scaleType="centerCrop"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:background="@color/dark_blue"/>
+            tools:background="@color/dark_blue"/>
 
         <TextView
             android:id="@+id/agentNameTextView"
@@ -31,7 +32,8 @@
             android:textStyle="bold"
             android:textColor="@color/white"
             android:gravity="center"
-            android:layout_marginBottom="16dp"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
