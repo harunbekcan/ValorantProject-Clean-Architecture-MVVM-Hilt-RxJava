@@ -6,7 +6,7 @@ import com.harunbekcan.valorantproject.data.uimodel.AgentItem
 
 open class AgentMapper {
 
-    private var agentAdapterList = arrayListOf<AgentItem>()
+    private var agentAdapterList = ArrayList<AgentItem>()
     fun getAgentAdapterList() = agentAdapterList
 
     fun mapOnAgentResponse(agentResponse: AgentResponse){

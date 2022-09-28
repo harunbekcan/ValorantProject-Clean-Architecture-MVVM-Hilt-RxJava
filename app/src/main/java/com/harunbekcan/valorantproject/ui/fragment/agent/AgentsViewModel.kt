@@ -26,4 +26,6 @@ class AgentsViewModel @Inject constructor(
             }
         )
     }
+
+    fun getAgentAdapterList() = agentMapper.getAgentAdapterList()
 }
