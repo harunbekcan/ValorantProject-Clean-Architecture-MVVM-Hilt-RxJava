@@ -9,10 +9,7 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 @HiltViewModel
-class AgentsViewModel @Inject constructor(
-    private val agentUseCase: AgentUseCase,
-    private val agentMapper: AgentMapper
-) : ViewModel() {
+class AgentsViewModel @Inject constructor( private val agentUseCase: AgentUseCase, private val agentMapper: AgentMapper) : ViewModel() {
 
     val agentResponseObserve = MutableLiveData<AgentResponse>()
     private val isLoad = MutableLiveData<Boolean>()
