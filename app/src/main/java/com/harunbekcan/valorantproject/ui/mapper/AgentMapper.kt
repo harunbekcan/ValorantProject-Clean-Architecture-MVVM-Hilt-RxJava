@@ -1,7 +1,7 @@
 package com.harunbekcan.valorantproject.ui.mapper
 
-import com.harunbekcan.valorantproject.data.response.AgentResponse
-import com.harunbekcan.valorantproject.data.response.AgentResponseItem
+import com.harunbekcan.valorantproject.data.response.agents.AgentResponse
+import com.harunbekcan.valorantproject.data.response.agents.AgentResponseItem
 import com.harunbekcan.valorantproject.data.uimodel.AgentItem
 import javax.inject.Inject
 

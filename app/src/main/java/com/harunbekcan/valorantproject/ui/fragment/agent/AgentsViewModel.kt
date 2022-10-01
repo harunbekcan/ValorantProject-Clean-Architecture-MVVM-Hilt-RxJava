@@ -2,7 +2,7 @@ package com.harunbekcan.valorantproject.ui.fragment.agent
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.harunbekcan.valorantproject.data.response.AgentResponse
+import com.harunbekcan.valorantproject.data.response.agents.AgentResponse
 import com.harunbekcan.valorantproject.data.usecase.AgentUseCase
 import com.harunbekcan.valorantproject.ui.mapper.AgentMapper
 import dagger.hilt.android.lifecycle.HiltViewModel

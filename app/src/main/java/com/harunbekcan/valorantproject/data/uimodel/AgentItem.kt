@@ -1,7 +1,7 @@
 package com.harunbekcan.valorantproject.data.uimodel
 
-import com.harunbekcan.valorantproject.data.response.Ability
-import com.harunbekcan.valorantproject.data.response.Role
+import com.harunbekcan.valorantproject.data.response.agents.Ability
+import com.harunbekcan.valorantproject.data.response.agents.Role
 
 data class AgentItem(
     var abilities: List<Ability> ?= arrayListOf(),
@@ -9,6 +9,6 @@ data class AgentItem(
     var displayIcon: String ?= "",
     var displayName: String ?= "",
     var fullPortraitV2: String ?= "",
-    var role: Role ?= null,
+    var role: Role?= null,
     var uuid: String ?= ""
 )

@@ -15,9 +15,9 @@
             android:layout_height="match_parent"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             android:orientation="vertical"
-            app:spanCount="2"
             android:clipToPadding="false"
-            android:paddingBottom="16dp" />
+            android:paddingBottom="16dp"
+            tools:listitem="@layout/item_map_layout"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

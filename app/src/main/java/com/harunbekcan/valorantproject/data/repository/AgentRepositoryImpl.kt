@@ -1,7 +1,7 @@
 package com.harunbekcan.valorantproject.data.repository
 
 import com.harunbekcan.valorantproject.data.api.ServiceInterface
-import com.harunbekcan.valorantproject.data.response.AgentResponse
+import com.harunbekcan.valorantproject.data.response.agents.AgentResponse
 import io.reactivex.rxjava3.core.Single
 
 class AgentRepositoryImpl(private val serviceInterface: ServiceInterface) : AgentRepository {

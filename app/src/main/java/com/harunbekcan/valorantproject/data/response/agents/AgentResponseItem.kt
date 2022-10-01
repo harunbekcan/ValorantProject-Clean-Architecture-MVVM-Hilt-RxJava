@@ -1,4 +1,4 @@
-package com.harunbekcan.valorantproject.data.response
+package com.harunbekcan.valorantproject.data.response.agents
 
 import com.google.gson.annotations.SerializedName
 
