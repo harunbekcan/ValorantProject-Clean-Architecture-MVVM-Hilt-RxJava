@@ -4,7 +4,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.harunbekcan.valorantproject.data.response.agents.AgentResponse
 import com.harunbekcan.valorantproject.data.usecase.agents.AgentUseCase
-import com.harunbekcan.valorantproject.ui.mapper.AgentMapper
+import com.harunbekcan.valorantproject.ui.mapper.agents.AgentMapper
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 

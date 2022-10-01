@@ -1,4 +1,4 @@
-package com.harunbekcan.valorantproject.ui.mapper
+package com.harunbekcan.valorantproject.ui.mapper.agents
 
 import com.harunbekcan.valorantproject.data.response.agents.AgentResponse
 import com.harunbekcan.valorantproject.data.response.agents.AgentResponseItem

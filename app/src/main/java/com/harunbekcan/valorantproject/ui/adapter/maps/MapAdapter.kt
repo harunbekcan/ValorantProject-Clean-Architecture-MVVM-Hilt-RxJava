@@ -1,4 +1,4 @@
-package com.harunbekcan.valorantproject.ui.adapter
+package com.harunbekcan.valorantproject.ui.adapter.maps
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -19,7 +19,7 @@ class MapAdapter(private val mapAdapterList : ArrayList<MapItem>): RecyclerView.
     override fun onBindViewHolder(holder: MapViewHolder, position: Int) {
         holder.binding.apply {
             mapsNameTextView.text = mapAdapterList[position].displayName
-            mapsImageView.loadImage(mapAdapterList[position].displayIcon)
+            mapsImageView.loadImage(mapAdapterList[position].mapIcon)
         }
     }
 

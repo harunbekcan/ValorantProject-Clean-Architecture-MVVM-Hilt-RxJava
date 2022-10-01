@@ -10,6 +10,6 @@ interface ServiceInterface {
     @GET("agents/?isPlayableCharacter=true")
     fun getAgents(): Single<AgentResponse>
 
-    @GET("v1/maps")
+    @GET("maps")
     fun getMaps(): Single<MapResponse>
 }

@@ -1,4 +1,4 @@
-package com.harunbekcan.valorantproject.ui.mapper
+package com.harunbekcan.valorantproject.ui.mapper.maps
 
 import com.harunbekcan.valorantproject.data.response.maps.MapResponse
 import com.harunbekcan.valorantproject.data.response.maps.MapResponseItem
@@ -16,7 +16,7 @@ open class MapMapper @Inject constructor() {
 
     private fun mapResponseConvertToModel(mapResponseItem: MapResponseItem): MapItem {
         return MapItem().apply {
-            mapResponseItem.displayIcon.let { displayIcon-> this.displayIcon = displayIcon }
+            mapResponseItem.splash.let { mapIcon-> this.mapIcon = mapIcon }
             mapResponseItem.displayName.let { displayName-> this.displayName = displayName }
         }
     }

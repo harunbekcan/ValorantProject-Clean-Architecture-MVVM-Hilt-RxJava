@@ -5,7 +5,7 @@ import androidx.fragment.app.viewModels
 import com.harunbekcan.valorantproject.R
 import com.harunbekcan.valorantproject.base.BaseFragment
 import com.harunbekcan.valorantproject.databinding.FragmentAgentsBinding
-import com.harunbekcan.valorantproject.ui.adapter.AgentAdapter
+import com.harunbekcan.valorantproject.ui.adapter.agents.AgentAdapter
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

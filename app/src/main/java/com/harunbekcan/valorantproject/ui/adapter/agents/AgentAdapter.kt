@@ -1,4 +1,4 @@
-package com.harunbekcan.valorantproject.ui.adapter
+package com.harunbekcan.valorantproject.ui.adapter.agents
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

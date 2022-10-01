@@ -4,7 +4,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.harunbekcan.valorantproject.data.response.maps.MapResponse
 import com.harunbekcan.valorantproject.data.usecase.maps.MapUseCase
-import com.harunbekcan.valorantproject.ui.mapper.MapMapper
+import com.harunbekcan.valorantproject.ui.mapper.maps.MapMapper
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
