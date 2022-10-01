@@ -1,8 +1,8 @@
 package com.harunbekcan.valorantproject.di
 
 import com.harunbekcan.valorantproject.data.api.ServiceInterface
-import com.harunbekcan.valorantproject.data.repository.AgentRepository
-import com.harunbekcan.valorantproject.data.repository.AgentRepositoryImpl
+import com.harunbekcan.valorantproject.data.repository.agents.AgentRepository
+import com.harunbekcan.valorantproject.data.repository.agents.AgentRepositoryImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

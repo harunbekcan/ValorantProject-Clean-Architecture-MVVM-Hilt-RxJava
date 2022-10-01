@@ -1,4 +1,4 @@
-package com.harunbekcan.valorantproject.data.repository
+package com.harunbekcan.valorantproject.data.repository.agents
 
 import com.harunbekcan.valorantproject.data.api.ServiceInterface
 import com.harunbekcan.valorantproject.data.response.agents.AgentResponse
