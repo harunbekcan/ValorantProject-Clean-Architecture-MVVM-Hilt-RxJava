@@ -1,4 +1,4 @@
-package com.harunbekcan.valorantproject.data.usecase
+package com.harunbekcan.valorantproject.data.usecase.agents
 
 import com.harunbekcan.valorantproject.base.BaseUseCase
 import com.harunbekcan.valorantproject.data.repository.agents.AgentRepository
