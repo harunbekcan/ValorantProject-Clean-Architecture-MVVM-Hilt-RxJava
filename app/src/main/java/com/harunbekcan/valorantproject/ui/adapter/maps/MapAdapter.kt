@@ -18,8 +18,8 @@ class MapAdapter(private val mapAdapterList : ArrayList<MapItem>): RecyclerView.
 
     override fun onBindViewHolder(holder: MapViewHolder, position: Int) {
         holder.binding.apply {
-            mapsNameTextView.text = mapAdapterList[position].displayName
-            mapsImageView.loadImage(mapAdapterList[position].mapIcon)
+            mapNameTextView.text = mapAdapterList[position].displayName
+            mapImageView.loadImage(mapAdapterList[position].mapIcon)
         }
     }
 
