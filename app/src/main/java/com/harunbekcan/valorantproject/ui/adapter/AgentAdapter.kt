@@ -3,7 +3,7 @@ package com.harunbekcan.valorantproject.ui.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.harunbekcan.valorantproject.data.uimodel.AgentItem
+import com.harunbekcan.valorantproject.data.uimodel.agents.AgentItem
 import com.harunbekcan.valorantproject.databinding.ItemAgentLayoutBinding
 import com.harunbekcan.valorantproject.utils.loadImage
 

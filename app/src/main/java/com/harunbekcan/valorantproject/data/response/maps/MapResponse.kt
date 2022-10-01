@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName
 
 data class MapResponse(
     @SerializedName("data")
-    val data: List<MapResponseItem>,
+    val mapList: List<MapResponseItem>,
     @SerializedName("status")
     val status: Int
 )
