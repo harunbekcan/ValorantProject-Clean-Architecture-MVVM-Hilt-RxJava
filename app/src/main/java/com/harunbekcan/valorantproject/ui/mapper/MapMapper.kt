@@ -9,7 +9,7 @@ open class MapMapper @Inject constructor() {
     private var mapAdapterList = ArrayList<MapItem>()
     fun getMapAdapterList() = mapAdapterList
 
-    fun mapOnAgentResponse(mapResponse: MapResponse){
+    fun mapOnMapResponse(mapResponse: MapResponse){
         mapAdapterList.clear()
         addMapItem(mapResponse)
     }
