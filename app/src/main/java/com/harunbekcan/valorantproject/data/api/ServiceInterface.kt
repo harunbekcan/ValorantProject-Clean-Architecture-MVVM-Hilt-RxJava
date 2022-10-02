@@ -15,6 +15,6 @@ interface ServiceInterface {
     fun getMaps(): Single<MapsResponse>
 
     @GET("weapons")
-    suspend fun getWeapons(): WeaponsResponse
+    fun getWeapons(): WeaponsResponse
 
 }
