@@ -4,7 +4,7 @@ import com.harunbekcan.valorantproject.data.api.ServiceInterface
 import com.harunbekcan.valorantproject.data.response.agents.AgentsResponse
 import io.reactivex.rxjava3.core.Single
 
-class AgentRepositoryImpl(private val serviceInterface: ServiceInterface) : AgentRepository {
+class AgentsRepositoryImpl(private val serviceInterface: ServiceInterface) : AgentsRepository {
 
     override fun getAgents(): Single<AgentsResponse> {
         return serviceInterface.getAgents()

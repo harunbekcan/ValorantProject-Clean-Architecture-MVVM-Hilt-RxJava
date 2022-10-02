@@ -1,10 +1,10 @@
 package com.harunbekcan.valorantproject.di
 
 import com.harunbekcan.valorantproject.data.api.ServiceInterface
-import com.harunbekcan.valorantproject.data.repository.agents.AgentRepository
-import com.harunbekcan.valorantproject.data.repository.agents.AgentRepositoryImpl
-import com.harunbekcan.valorantproject.data.repository.maps.MapRepository
-import com.harunbekcan.valorantproject.data.repository.maps.MapRepositoryImpl
+import com.harunbekcan.valorantproject.data.repository.agents.AgentsRepository
+import com.harunbekcan.valorantproject.data.repository.agents.AgentsRepositoryImpl
+import com.harunbekcan.valorantproject.data.repository.maps.MapsRepository
+import com.harunbekcan.valorantproject.data.repository.maps.MapsRepositoryImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -17,13 +17,13 @@ object RepositoryModule {
 
     @Provides
     @Singleton
-    fun provideAgentRepository(serviceInterface: ServiceInterface): AgentRepository {
-        return AgentRepositoryImpl(serviceInterface)
+    fun provideAgentRepository(serviceInterface: ServiceInterface): AgentsRepository {
+        return AgentsRepositoryImpl(serviceInterface)
     }
 
     @Provides
     @Singleton
-    fun provideMapRepository(serviceInterface: ServiceInterface): MapRepository {
-        return MapRepositoryImpl(serviceInterface)
+    fun provideMapRepository(serviceInterface: ServiceInterface): MapsRepository {
+        return MapsRepositoryImpl(serviceInterface)
     }
 }

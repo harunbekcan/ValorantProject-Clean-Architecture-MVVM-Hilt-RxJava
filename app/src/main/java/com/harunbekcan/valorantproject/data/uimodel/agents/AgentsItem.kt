@@ -3,7 +3,7 @@ package com.harunbekcan.valorantproject.data.uimodel.agents
 import com.harunbekcan.valorantproject.data.response.agents.Ability
 import com.harunbekcan.valorantproject.data.response.agents.Role
 
-data class AgentItem(
+data class AgentsItem(
     var abilities: List<Ability>?= arrayListOf(),
     var description: String ?= null,
     var displayIcon: String ?= null,
