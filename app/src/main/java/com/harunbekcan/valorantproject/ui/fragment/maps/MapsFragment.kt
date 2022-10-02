@@ -27,9 +27,9 @@ class MapsFragment : BaseFragment<FragmentMapsBinding>() {
     }
 
     private fun initMapResponseObserve(){
-        viewModel.mapResponseObserve.observe(viewLifecycleOwner){
+        viewModel.mapsResponseObserve.observe(viewLifecycleOwner){
             initAdapter()
-            viewModel.mapOnMapResponse(it)
+            viewModel.mapOnMapsResponse(it)
         }
     }
 

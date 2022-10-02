@@ -2,7 +2,7 @@ package com.harunbekcan.valorantproject.data.response.agents
 
 import com.google.gson.annotations.SerializedName
 
-data class AgentResponseItem(
+data class AgentsResponseItem(
     @SerializedName("abilities")
     val abilities: List<Ability>?,
     @SerializedName("assetPath")

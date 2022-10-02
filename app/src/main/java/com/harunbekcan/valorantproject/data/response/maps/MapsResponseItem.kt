@@ -3,7 +3,7 @@ package com.harunbekcan.valorantproject.data.response.maps
 import com.google.gson.annotations.SerializedName
 import kotlinx.android.parcel.RawValue
 
-data class MapResponseItem(
+data class MapsResponseItem(
     @SerializedName("assetPath")
     val assetPath: String,
     @SerializedName("callouts")

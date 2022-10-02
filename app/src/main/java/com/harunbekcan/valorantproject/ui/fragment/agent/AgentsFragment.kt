@@ -27,9 +27,9 @@ class AgentsFragment : BaseFragment<FragmentAgentsBinding>() {
     }
 
     private fun initAgentResponseObserve(){
-        viewModel.agentResponseObserve.observe(viewLifecycleOwner){
+        viewModel.agentsResponseObserve.observe(viewLifecycleOwner){
             initAdapter()
-            viewModel.mapOnAgentResponse(it)
+            viewModel.mapOnAgentsResponse(it)
         }
     }
 }

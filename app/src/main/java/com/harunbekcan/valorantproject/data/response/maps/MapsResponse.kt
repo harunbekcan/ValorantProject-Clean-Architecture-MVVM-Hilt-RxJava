@@ -2,9 +2,9 @@ package com.harunbekcan.valorantproject.data.response.maps
 
 import com.google.gson.annotations.SerializedName
 
-data class MapResponse(
+data class MapsResponse(
     @SerializedName("data")
-    val mapList: List<MapResponseItem>,
+    val mapList: List<MapsResponseItem>,
     @SerializedName("status")
     val status: Int
 )

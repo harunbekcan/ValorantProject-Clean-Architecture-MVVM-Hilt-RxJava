@@ -1,7 +1,7 @@
 package com.harunbekcan.valorantproject.ui.mapper.maps
 
-import com.harunbekcan.valorantproject.data.response.maps.MapResponse
-import com.harunbekcan.valorantproject.data.response.maps.MapResponseItem
+import com.harunbekcan.valorantproject.data.response.maps.MapsResponse
+import com.harunbekcan.valorantproject.data.response.maps.MapsResponseItem
 import com.harunbekcan.valorantproject.data.uimodel.maps.MapItem
 import javax.inject.Inject
 
@@ -9,21 +9,21 @@ open class MapMapper @Inject constructor() {
     private var mapAdapterList = ArrayList<MapItem>()
     fun getMapAdapterList() = mapAdapterList
 
-    fun mapOnMapResponse(mapResponse: MapResponse){
+    fun mapOnMapsResponse(mapsResponse: MapsResponse){
         mapAdapterList.clear()
-        addMapItem(mapResponse)
+        addMapItem(mapsResponse)
     }
 
-    private fun mapResponseConvertToModel(mapResponseItem: MapResponseItem): MapItem {
+    private fun mapsResponseConvertToModel(mapsResponseItem: MapsResponseItem): MapItem {
         return MapItem().apply {
-            mapResponseItem.splash.let { mapIcon-> this.mapIcon = mapIcon }
-            mapResponseItem.displayName.let { displayName-> this.displayName = displayName }
+            mapsResponseItem.splash.let { mapIcon-> this.mapIcon = mapIcon }
+            mapsResponseItem.displayName.let { displayName-> this.displayName = displayName }
         }
     }
 
-    private fun addMapItem(mapResponse: MapResponse) {
-        mapResponse.mapList.forEach { response ->
-            val mapItem = mapResponseConvertToModel(response)
+    private fun addMapItem(mapsResponse: MapsResponse) {
+        mapsResponse.mapList.forEach { response ->
+            val mapItem = mapsResponseConvertToModel(response)
             mapAdapterList.add(mapItem)
         }
     }
