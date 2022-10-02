@@ -19,6 +19,6 @@
             android:clipToPadding="false"
             android:paddingBottom="16dp"
             tools:listitem="@layout/item_weapon_layout"/>
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

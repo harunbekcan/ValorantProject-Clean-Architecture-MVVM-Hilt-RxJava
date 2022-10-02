@@ -1,4 +1,4 @@
-package com.harunbekcan.valorantproject.ui.fragment.agent
+package com.harunbekcan.valorantproject.ui.fragment.agents
 
 import android.os.Bundle
 import androidx.fragment.app.viewModels

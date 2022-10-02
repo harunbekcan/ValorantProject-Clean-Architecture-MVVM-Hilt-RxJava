@@ -1,4 +1,4 @@
-package com.harunbekcan.valorantproject.ui.fragment.agent
+package com.harunbekcan.valorantproject.ui.fragment.agents
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel

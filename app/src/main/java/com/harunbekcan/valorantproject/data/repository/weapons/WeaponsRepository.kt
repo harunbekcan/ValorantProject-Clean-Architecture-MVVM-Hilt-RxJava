@@ -5,5 +5,5 @@ import io.reactivex.rxjava3.core.Single
 
 interface WeaponsRepository {
 
-    fun getWeapons():Single<WeaponsResponse>
+    fun getWeapons(): Single<WeaponsResponse>
 }
