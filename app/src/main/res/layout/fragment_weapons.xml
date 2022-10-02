@@ -16,6 +16,8 @@
             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
             app:spanCount="2"
             android:orientation="vertical"
+            android:clipToPadding="false"
+            android:paddingBottom="16dp"
             tools:listitem="@layout/item_weapon_layout"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
