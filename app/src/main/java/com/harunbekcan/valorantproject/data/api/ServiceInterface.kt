@@ -15,6 +15,6 @@ interface ServiceInterface {
     fun getMaps(): Single<MapsResponse>
 
     @GET("weapons")
-    fun getWeapons(): WeaponsResponse
+    fun getWeapons(): Single<WeaponsResponse>
 
 }
