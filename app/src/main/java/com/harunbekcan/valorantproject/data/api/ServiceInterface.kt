@@ -2,6 +2,7 @@ package com.harunbekcan.valorantproject.data.api
 
 import com.harunbekcan.valorantproject.data.response.agents.AgentsResponse
 import com.harunbekcan.valorantproject.data.response.maps.MapsResponse
+import com.harunbekcan.valorantproject.data.response.tiers.TiersResponse
 import com.harunbekcan.valorantproject.data.response.weapons.WeaponsResponse
 import io.reactivex.rxjava3.core.Single
 import retrofit2.http.GET
@@ -16,5 +17,8 @@ interface ServiceInterface {
 
     @GET("weapons")
     fun getWeapons(): Single<WeaponsResponse>
+
+    @GET("competitivetiers")
+    fun getTiers(): TiersResponse
 
 }
