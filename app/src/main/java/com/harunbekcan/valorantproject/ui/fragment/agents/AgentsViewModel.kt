@@ -25,8 +25,6 @@ class AgentsViewModel @Inject constructor(private val agentsUseCase: AgentsUseCa
             }
         )
     }
-
     fun getAgentsAdapterList() = agentsMapper.getAgentsAdapterList()
-
     fun mapOnAgentsResponse(agentsResponse: AgentsResponse) = agentsMapper.mapOnAgentsResponse(agentsResponse)
 }

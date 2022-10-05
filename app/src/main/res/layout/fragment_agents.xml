@@ -15,10 +15,12 @@
             android:layout_height="match_parent"
             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
             android:orientation="vertical"
-            app:spanCount="2"
             android:clipToPadding="false"
+            android:paddingStart="20dp"
             android:paddingBottom="16dp"
-            tools:listitem="@layout/item_agent_layout"/>
+            app:spanCount="3"
+            tools:listitem="@layout/item_agent_layout"
+            tools:ignore="RtlSymmetry" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

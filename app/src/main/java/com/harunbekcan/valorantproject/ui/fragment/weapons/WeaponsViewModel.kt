@@ -28,9 +28,6 @@ class WeaponsViewModel @Inject constructor(
             }
         )
     }
-
     fun getWeaponsAdapterList() = weaponsMapper.getWeaponsAdapterList()
-
     fun mapOnWeaponsResponse(weaponsResponse: WeaponsResponse) = weaponsMapper.mapOnWeaponsResponse(weaponsResponse)
-
 }

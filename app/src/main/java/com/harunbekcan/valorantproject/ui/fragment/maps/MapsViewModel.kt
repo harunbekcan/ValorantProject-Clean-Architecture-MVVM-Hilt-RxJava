@@ -25,9 +25,6 @@ class MapsViewModel @Inject constructor(private val mapsUseCase: MapsUseCase, pr
             }
         )
     }
-
     fun getMapsAdapterList() = mapsMapper.getMapsAdapterList()
-
     fun mapOnMapsResponse(mapsResponse: MapsResponse) = mapsMapper.mapOnMapsResponse(mapsResponse)
-
 }
