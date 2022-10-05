@@ -19,6 +19,6 @@ interface ServiceInterface {
     fun getWeapons(): Single<WeaponsResponse>
 
     @GET("competitivetiers")
-    fun getTiers(): TiersResponse
+    fun getTiers(): Single<TiersResponse>
 
 }
