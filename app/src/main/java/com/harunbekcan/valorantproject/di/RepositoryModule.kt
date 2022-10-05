@@ -5,6 +5,8 @@ import com.harunbekcan.valorantproject.data.repository.agents.AgentsRepository
 import com.harunbekcan.valorantproject.data.repository.agents.AgentsRepositoryImpl
 import com.harunbekcan.valorantproject.data.repository.maps.MapsRepository
 import com.harunbekcan.valorantproject.data.repository.maps.MapsRepositoryImpl
+import com.harunbekcan.valorantproject.data.repository.tiers.TiersRepository
+import com.harunbekcan.valorantproject.data.repository.tiers.TiersRepositoryImpl
 import com.harunbekcan.valorantproject.data.repository.weapons.WeaponsRepository
 import com.harunbekcan.valorantproject.data.repository.weapons.WeaponsRepositoryImpl
 import dagger.Module
@@ -33,5 +35,11 @@ object RepositoryModule {
     @Singleton
     fun provideWeaponsRepository(serviceInterface: ServiceInterface): WeaponsRepository {
         return WeaponsRepositoryImpl(serviceInterface)
+    }
+
+    @Provides
+    @Singleton
+    fun provideTiersRepository(serviceInterface: ServiceInterface): TiersRepository {
+        return TiersRepositoryImpl(serviceInterface)
     }
 }
