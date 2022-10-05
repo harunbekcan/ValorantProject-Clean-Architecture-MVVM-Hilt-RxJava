@@ -5,9 +5,10 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="110dp"
-        android:layout_height="140dp"
+        android:layout_height="110dp"
         android:layout_marginTop="20dp"
-        app:cardCornerRadius="8dp">
+        app:cardCornerRadius="8dp"
+        android:backgroundTint="@color/dark_blue">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -18,23 +19,25 @@
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/tierImageView"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scaleType="centerCrop"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:background="@color/dark_blue"/>
+                android:layout_height="0dp"
+                android:layout_marginTop="8dp"
+                android:padding="6dp"
+                app:layout_constraintBottom_toTopOf="@+id/tierNameTextView"
+                app:layout_constraintTop_toTopOf="parent"/>
 
             <TextView
                 style="@style/GeneralTextStyle"
                 android:id="@+id/tierNameTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="14sp"
+                android:textSize="12sp"
+                android:layout_marginTop="8dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tierImageView"
                 tools:text="RADIANT" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
 
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 </layout>

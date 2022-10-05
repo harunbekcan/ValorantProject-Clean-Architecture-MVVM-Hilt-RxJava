@@ -14,9 +14,9 @@ data class CompetitiveTierResponseItem(
     @SerializedName("largeIcon")
     val largeIcon: String,
     @SerializedName("rankTriangleDownIcon")
-    val rankTriangleDownIcon: Any,
+    val rankTriangleDownIcon: Any?,
     @SerializedName("rankTriangleUpIcon")
-    val rankTriangleUpIcon: Any,
+    val rankTriangleUpIcon: Any?,
     @SerializedName("smallIcon")
     val smallIcon: String,
     @SerializedName("tier")
