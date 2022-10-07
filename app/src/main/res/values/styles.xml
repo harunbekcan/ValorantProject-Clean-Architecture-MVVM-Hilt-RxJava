@@ -9,4 +9,10 @@
         <item name="android:layout_marginBottom">8dp</item>
     </style>
 
+    <style name="ImageView.Corner" parent="">
+        <item name="cornerSizeBottomRight">32dp</item>
+        <item name="cornerSizeBottomLeft">32dp</item>
+        <item name="cornerFamily">rounded</item>
+    </style>
+
 </resources>
