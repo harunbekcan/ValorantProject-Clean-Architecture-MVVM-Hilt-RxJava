@@ -79,4 +79,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/descriptionTitleTextView"
         tools:text="Turkish bounty hunter Fade unleashes the power of raw nightmare to seize enemy secrets. Attuned with terror itself, she hunts down targets and reveals their deepest fears - before crushing them in the dark." />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/abilitiesRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionTextView"
+        tools:listitem="@layout/item_ability_layout"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
