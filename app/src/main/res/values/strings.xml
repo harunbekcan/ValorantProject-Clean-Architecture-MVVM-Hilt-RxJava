@@ -8,6 +8,7 @@
     <string name="weapons">Weapons</string>
     <string name="tiers">Tiers</string>
     <string name="description">Description</string>
+    <string name="special_abilities">Special Abilities</string>
 
 
 </resources>
