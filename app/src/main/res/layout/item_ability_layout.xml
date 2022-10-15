@@ -11,32 +11,34 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/light_blue">
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/abilityImageView"
             android:layout_width="60dp"
             android:layout_height="0dp"
-            android:layout_gravity="center"
+            android:padding="4dp"
             tools:src="@color/red"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            app:layout_constraintBottom_toBottomOf="parent" />
 
         <TextView
             android:id="@+id/abilityTitleTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:textColor="@color/dark_blue"
+            android:textColor="@color/white"
             android:textStyle="bold"
             android:textSize="12sp"
+            android:layout_marginTop="4dp"
             android:layout_marginStart="8dp"
             app:layout_constraintStart_toEndOf="@+id/abilityImageView"
             app:layout_constraintTop_toTopOf="@+id/abilityImageView"
             tools:text="Seize" />
 
         <TextView
-            android:id="@+id/abilityTextView"
+            android:id="@+id/abilityDescriptionTextView"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:textColor="@color/white"
@@ -48,7 +50,6 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@+id/abilityTitleTextView"
             app:layout_constraintEnd_toEndOf="parent"
-            tools:textColor="@color/dark_blue"
             tools:text="EQUIP a knot of raw fear. FIRE to throw. The knot drops down after a set time. RE-USE to drop the knot early. The knot ruptures on impact, holding nearby enemies in place. Held enemies are deafened, and decayed."
             tools:ignore="SmallSp" />
 

@@ -8,6 +8,7 @@ import com.harunbekcan.valorantproject.R
 import com.harunbekcan.valorantproject.base.BaseFragment
 import com.harunbekcan.valorantproject.data.uimodel.agents.AgentDetailItem
 import com.harunbekcan.valorantproject.databinding.FragmentAgentDetailBinding
+import com.harunbekcan.valorantproject.ui.adapter.agents.AbilitiesAdapter
 import com.harunbekcan.valorantproject.utils.loadImage
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -16,6 +17,7 @@ class AgentDetailFragment : BaseFragment<FragmentAgentDetailBinding>() {
 
     private val viewModel : AgentDetailViewModel by viewModels()
     private val args : AgentDetailFragmentArgs by navArgs()
+    private lateinit var abilitiesAdapter : AbilitiesAdapter
 
     override fun getLayoutId(): Int = R.layout.fragment_agent_detail
 
@@ -38,7 +40,15 @@ class AgentDetailFragment : BaseFragment<FragmentAgentDetailBinding>() {
                 agentNameTextView.text = item.agentName
                 roleTextView.text = item.roleName
                 descriptionTextView.text = item.agentDescription
+                initAbilitiesAdapter(item)
             }
+        }
+    }
+
+    private fun initAbilitiesAdapter(agentDetailItem: AgentDetailItem){
+        agentDetailItem.abilities?.let {
+            abilitiesAdapter = AbilitiesAdapter(it)
+            binding.agentDetailLayout.abilitiesRecyclerView.adapter = abilitiesAdapter
         }
     }
     private fun initAgentDetailResponseObserve() {

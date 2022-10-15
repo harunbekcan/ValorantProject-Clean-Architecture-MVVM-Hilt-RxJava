@@ -7,7 +7,7 @@ data class AgentDetailItem (
     var bustPortrait : String ?= "",
     var roleName : String ?= "",
     var uuid : String ?= "",
-    var abilities : List<AbilityItem> ?= arrayListOf(),
+    var abilities : ArrayList<AbilityItem> ?= arrayListOf(),
 )
 
 
