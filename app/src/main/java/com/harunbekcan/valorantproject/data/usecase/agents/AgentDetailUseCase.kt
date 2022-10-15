@@ -7,9 +7,10 @@ import io.reactivex.rxjava3.core.Single
 import javax.inject.Inject
 
 class AgentDetailUseCase @Inject constructor(
-    private val agentsRepository: AgentsRepository,
-    private var id : String
+    private val agentsRepository: AgentsRepository
 ) : BaseUseCase<AgentDetailResponse>() {
+
+    private lateinit var id : String
 
     fun agentUuid(uuid: String) {
         id = uuid

@@ -2,6 +2,7 @@ package com.harunbekcan.valorantproject.ui.fragment.agents
 
 import android.os.Bundle
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.harunbekcan.valorantproject.R
 import com.harunbekcan.valorantproject.base.BaseFragment
@@ -21,6 +22,13 @@ class AgentDetailFragment : BaseFragment<FragmentAgentDetailBinding>() {
     override fun prepareView(savedInstanceState: Bundle?) {
         viewModel.agentDetailRequest(args.uuid)
         initAgentDetailResponseObserve()
+        initBackButtonClickListener()
+    }
+
+    private fun initBackButtonClickListener(){
+        binding.agentDetailLayout.backButtonImageView.setOnClickListener {
+            findNavController().popBackStack()
+        }
     }
 
     private fun initUi(agentDetailItem: AgentDetailItem) {

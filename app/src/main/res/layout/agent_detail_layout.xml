@@ -31,6 +31,16 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:shapeAppearanceOverlay="@style/ImageView.Corner" />
 
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/backButtonImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_back_white"
+                android:layout_margin="16dp"
+                android:padding="4dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
             <TextView
                 android:id="@+id/agentNameTextView"
                 android:layout_width="wrap_content"
