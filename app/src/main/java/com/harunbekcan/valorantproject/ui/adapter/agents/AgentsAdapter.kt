@@ -1,5 +1,6 @@
 package com.harunbekcan.valorantproject.ui.adapter.agents
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -7,7 +8,7 @@ import com.harunbekcan.valorantproject.data.uimodel.agents.AgentsItem
 import com.harunbekcan.valorantproject.databinding.ItemAgentLayoutBinding
 import com.harunbekcan.valorantproject.utils.loadImage
 
-class AgentsAdapter(private val agentsAdapterList : ArrayList<AgentsItem>):RecyclerView.Adapter<AgentsAdapter.AgentsViewHolder>() {
+class AgentsAdapter(private val agentsAdapterList : ArrayList<AgentsItem>,private val itemClick: (AgentsItem) -> Unit):RecyclerView.Adapter<AgentsAdapter.AgentsViewHolder>() {
 
     class AgentsViewHolder(val binding: ItemAgentLayoutBinding):RecyclerView.ViewHolder(binding.root)
 
@@ -20,6 +21,10 @@ class AgentsAdapter(private val agentsAdapterList : ArrayList<AgentsItem>):Recyc
         holder.binding.apply {
             agentNameTextView.text = agentsAdapterList[position].displayName
             agentImageView.loadImage(agentsAdapterList[position].displayIcon)
+
+            agentCardView.setOnClickListener {
+                itemClick.invoke(agentsAdapterList[position])
+            }
         }
     }
 

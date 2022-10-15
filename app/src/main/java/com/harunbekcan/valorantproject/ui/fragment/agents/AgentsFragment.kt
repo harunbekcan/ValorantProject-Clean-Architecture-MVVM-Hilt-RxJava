@@ -2,6 +2,7 @@ package com.harunbekcan.valorantproject.ui.fragment.agents
 
 import android.os.Bundle
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.harunbekcan.valorantproject.R
 import com.harunbekcan.valorantproject.base.BaseFragment
 import com.harunbekcan.valorantproject.databinding.FragmentAgentsBinding
@@ -22,14 +23,18 @@ class AgentsFragment : BaseFragment<FragmentAgentsBinding>() {
     }
 
     private fun initAdapter(){
-        agentsAdapter = AgentsAdapter(viewModel.getAgentsAdapterList())
+        agentsAdapter = AgentsAdapter(viewModel.getAgentsAdapterList(), itemClick = {
+            it.uuid?.let { uuid->
+                findNavController().navigate(AgentsFragmentDirections.actionAgentsFragmentToAgentDetailFragment(uuid))
+            }
+        })
         binding.agentsRecyclerView.adapter = agentsAdapter
     }
 
     private fun initAgentsResponseObserve(){
         viewModel.agentsResponseObserve.observe(viewLifecycleOwner){
-            initAdapter()
             viewModel.mapOnAgentsResponse(it)
+            initAdapter()
         }
     }
 }

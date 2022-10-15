@@ -19,6 +19,7 @@ open class AgentsMapper @Inject constructor() {
         return AgentsItem().apply {
             agentsResponseItem.displayIcon.let { displayIcon-> this.displayIcon = displayIcon }
             agentsResponseItem.displayName.let { displayName-> this.displayName = displayName }
+            agentsResponseItem.uuid.let { displayName-> this.uuid = displayName }
         }
     }
 

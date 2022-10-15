@@ -3,7 +3,6 @@ package com.harunbekcan.valorantproject.ui.fragment.agents
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.harunbekcan.valorantproject.data.response.agents.AgentDetailResponse
-import com.harunbekcan.valorantproject.data.response.agents.AgentsResponse
 import com.harunbekcan.valorantproject.data.usecase.agents.AgentDetailUseCase
 import com.harunbekcan.valorantproject.ui.mapper.agents.AgentDetailMapper
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -18,7 +17,8 @@ class AgentDetailViewModel @Inject constructor(
     val agentDetailResponseObserve = MutableLiveData<AgentDetailResponse>()
     private val isLoad = MutableLiveData<Boolean>()
 
-    fun agentsRequest() {
+    fun agentDetailRequest(uuid:String) {
+        agentDetailUseCase.agentUuid(uuid)
         agentDetailUseCase.execute(
             onSuccess = {
                 isLoad.value = true

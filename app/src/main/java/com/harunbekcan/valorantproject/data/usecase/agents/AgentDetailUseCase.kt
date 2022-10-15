@@ -8,10 +8,13 @@ import javax.inject.Inject
 
 class AgentDetailUseCase @Inject constructor(
     private val agentsRepository: AgentsRepository,
-    private val uuid: String
+    private var id : String
 ) : BaseUseCase<AgentDetailResponse>() {
 
+    fun agentUuid(uuid: String) {
+        id = uuid
+    }
     override fun buildUseCaseSingle(): Single<AgentDetailResponse> {
-        return agentsRepository.getAgentDetail(uuid)
+        return agentsRepository.getAgentDetail(id)
     }
 }
