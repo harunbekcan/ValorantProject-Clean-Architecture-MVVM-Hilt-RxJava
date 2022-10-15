@@ -15,7 +15,7 @@ interface ServiceInterface {
     fun getAgents(): Single<AgentsResponse>
 
     @GET("agents/{agentUuid}")
-    suspend fun getAgentDetail(@Path("agentUuid") agentUuid: String): AgentDetailResponse
+    fun getAgentDetail(@Path("agentUuid") agentUuid: String): Single<AgentDetailResponse>
 
     @GET("maps")
     fun getMaps(): Single<MapsResponse>
