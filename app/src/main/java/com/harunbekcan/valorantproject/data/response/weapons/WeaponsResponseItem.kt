@@ -17,4 +17,6 @@ data class WeaponsResponseItem(
     val killStreamIcon: String,
     @SerializedName("uuid")
     val uuid: String,
+    @SerializedName("weaponStats")
+    val weaponStats: WeaponStats
 )
