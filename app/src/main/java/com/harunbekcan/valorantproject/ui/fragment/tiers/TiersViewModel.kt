@@ -25,6 +25,6 @@ class TiersViewModel @Inject constructor( private val tiersUseCase: TiersUseCase
             }
         )
     }
-    fun getTiersAdapterList() = tiersMapper.getTiersAdapterList()
+    fun getTiersAdapterList() = tiersMapper.tiersAdapterList
     fun mapOnTiersResponse(tiersResponse: TiersResponse) = tiersMapper.mapOnTiersResponse(tiersResponse)
 }

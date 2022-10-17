@@ -7,8 +7,7 @@ import javax.inject.Inject
 
 open class TiersMapper @Inject constructor() {
 
-    private var tiersAdapterList = ArrayList<TiersItem>()
-    fun getTiersAdapterList() = tiersAdapterList
+    var tiersAdapterList = ArrayList<TiersItem>()
 
     fun mapOnTiersResponse(tiersResponse: TiersResponse){
         tiersAdapterList.clear()
