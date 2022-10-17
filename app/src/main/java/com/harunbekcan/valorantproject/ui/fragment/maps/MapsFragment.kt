@@ -18,19 +18,19 @@ class MapsFragment : BaseFragment<FragmentMapsBinding>() {
 
     override fun prepareView(savedInstanceState: Bundle?) {
         viewModel.mapsRequest()
-        initMapsResponseObserve()
+        initMapsAdapterListObserve()
     }
 
     private fun initAdapter(){
-        mapsAdapter = MapsAdapter(viewModel.getMapsAdapterList())
-        binding.mapsRecyclerView.adapter = mapsAdapter
-    }
-
-    private fun initMapsResponseObserve(){
-        viewModel.mapsResponseObserve.observe(viewLifecycleOwner){
-            initAdapter()
-            viewModel.mapOnMapsResponse(it)
+        viewModel.mapsAdapterList.value?.let {
+            mapsAdapter = MapsAdapter(it)
+            binding.mapsRecyclerView.adapter = mapsAdapter
         }
     }
 
+    private fun initMapsAdapterListObserve(){
+        viewModel.mapsAdapterList.observe(viewLifecycleOwner){
+            initAdapter()
+        }
+    }
 }
