@@ -23,7 +23,7 @@ class AgentDetailFragment : BaseFragment<FragmentAgentDetailBinding>() {
 
     override fun prepareView(savedInstanceState: Bundle?) {
         viewModel.agentDetailRequest(args.uuid)
-        initAgentDetailResponseObserve()
+        initAgentDetailItemObserve()
         initBackButtonClickListener()
     }
 
@@ -51,10 +51,9 @@ class AgentDetailFragment : BaseFragment<FragmentAgentDetailBinding>() {
             binding.agentDetailLayout.abilitiesRecyclerView.adapter = abilitiesAdapter
         }
     }
-    private fun initAgentDetailResponseObserve() {
-        viewModel.agentDetailResponseObserve.observe(viewLifecycleOwner){
-            viewModel.mapOnAgentDetailResponse(it)
-            initUi(viewModel.getAgentDetailItem())
+    private fun initAgentDetailItemObserve() {
+        viewModel.agentDetailItemObserve.observe(viewLifecycleOwner){
+            initUi(it)
         }
     }
 }

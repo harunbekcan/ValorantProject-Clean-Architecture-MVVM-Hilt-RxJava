@@ -8,9 +8,7 @@ import javax.inject.Inject
 
 open class AgentDetailMapper @Inject constructor() {
 
-    private lateinit var agentDetailItem : AgentDetailItem
-
-    fun getAgentDetailItem() = agentDetailItem
+    var agentDetailItem : AgentDetailItem ?= null
 
     fun mapOnAgentDetailResponse(agentDetailResponse: AgentDetailResponse) {
         addAgentDetailItem(agentDetailResponse)
