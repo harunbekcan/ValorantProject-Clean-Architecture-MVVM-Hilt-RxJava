@@ -52,7 +52,7 @@ class AgentDetailFragment : BaseFragment<FragmentAgentDetailBinding>() {
         }
     }
     private fun initAgentDetailItemObserve() {
-        viewModel.agentDetailItemObserve.observe(viewLifecycleOwner){
+        viewModel.agentDetailItem.observe(viewLifecycleOwner){
             initUi(it)
         }
     }

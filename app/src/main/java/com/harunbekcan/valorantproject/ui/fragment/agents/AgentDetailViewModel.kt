@@ -1,5 +1,6 @@
 package com.harunbekcan.valorantproject.ui.fragment.agents
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.harunbekcan.valorantproject.data.uimodel.agents.AgentDetailItem
@@ -14,14 +15,15 @@ class AgentDetailViewModel @Inject constructor(
     private val agentDetailMapper: AgentDetailMapper
 ) : ViewModel() {
 
-    val agentDetailItemObserve = MutableLiveData<AgentDetailItem>()
+    private val _agentDetailItem = MutableLiveData<AgentDetailItem>()
+    val agentDetailItem : LiveData<AgentDetailItem> = _agentDetailItem
 
     fun agentDetailRequest(uuid:String) {
         agentDetailUseCase.agentUuid(uuid)
         agentDetailUseCase.execute(
             onSuccess = {
                 agentDetailMapper.mapOnAgentDetailResponse(it)
-                agentDetailItemObserve.postValue(agentDetailMapper.agentDetailItem)
+                _agentDetailItem.value = agentDetailMapper.agentDetailItem
             },
             onError = {
                 it.printStackTrace()
