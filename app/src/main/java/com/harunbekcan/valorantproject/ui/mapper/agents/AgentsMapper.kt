@@ -7,8 +7,7 @@ import javax.inject.Inject
 
 open class AgentsMapper @Inject constructor() {
 
-    private var agentsAdapterList = ArrayList<AgentsItem>()
-    fun getAgentsAdapterList() = agentsAdapterList
+    var agentsAdapterList = ArrayList<AgentsItem>()
 
     fun mapOnAgentsResponse(agentsResponse: AgentsResponse){
         agentsAdapterList.clear()

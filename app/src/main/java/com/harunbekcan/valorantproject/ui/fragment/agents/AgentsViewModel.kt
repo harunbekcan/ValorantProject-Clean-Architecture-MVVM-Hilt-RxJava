@@ -22,7 +22,7 @@ class AgentsViewModel @Inject constructor(
         agentsUseCase.execute(
             onSuccess = {
                 agentsMapper.mapOnAgentsResponse(it)
-                _agentAdapterList.value = agentsMapper.getAgentsAdapterList()
+                _agentAdapterList.value = agentsMapper.agentsAdapterList
             },
             onError = {
                 it.printStackTrace()
