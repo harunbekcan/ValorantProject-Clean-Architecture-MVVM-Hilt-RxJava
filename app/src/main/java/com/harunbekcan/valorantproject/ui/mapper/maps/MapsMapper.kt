@@ -6,8 +6,8 @@ import com.harunbekcan.valorantproject.data.uimodel.maps.MapsItem
 import javax.inject.Inject
 
 open class MapsMapper @Inject constructor() {
-    private var mapsAdapterList = ArrayList<MapsItem>()
-    fun getMapsAdapterList() = mapsAdapterList
+
+    var mapsAdapterList = ArrayList<MapsItem>()
 
     fun mapOnMapsResponse(mapsResponse: MapsResponse){
         mapsAdapterList.clear()
