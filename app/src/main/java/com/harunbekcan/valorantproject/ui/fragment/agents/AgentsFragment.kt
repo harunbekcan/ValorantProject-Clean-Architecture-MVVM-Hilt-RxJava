@@ -19,21 +19,22 @@ class AgentsFragment : BaseFragment<FragmentAgentsBinding>() {
 
     override fun prepareView(savedInstanceState: Bundle?) {
         viewModel.agentsRequest()
-        initAgentsResponseObserve()
+        initAgentAdapterListObserve()
     }
 
     private fun initAdapter(){
-        agentsAdapter = AgentsAdapter(viewModel.getAgentsAdapterList(), itemClick = {
-            it.uuid?.let { uuid->
-                findNavController().navigate(AgentsFragmentDirections.actionAgentsFragmentToAgentDetailFragment(uuid))
-            }
-        })
-        binding.agentsRecyclerView.adapter = agentsAdapter
+        viewModel.agentAdapterList.value?.let { adapterList->
+            agentsAdapter = AgentsAdapter(adapterList, itemClick = {
+                it.uuid?.let { uuid->
+                    findNavController().navigate(AgentsFragmentDirections.actionAgentsFragmentToAgentDetailFragment(uuid))
+                }
+            })
+            binding.agentsRecyclerView.adapter = agentsAdapter
+        }
     }
 
-    private fun initAgentsResponseObserve(){
-        viewModel.agentsResponseObserve.observe(viewLifecycleOwner){
-            viewModel.mapOnAgentsResponse(it)
+    private fun initAgentAdapterListObserve(){
+        viewModel.agentAdapterList.observe(viewLifecycleOwner){
             initAdapter()
         }
     }
