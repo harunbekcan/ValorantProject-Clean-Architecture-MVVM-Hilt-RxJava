@@ -18,18 +18,19 @@ class WeaponsFragment : BaseFragment<FragmentWeaponsBinding>() {
 
     override fun prepareView(savedInstanceState: Bundle?) {
         viewModel.weaponsRequest()
-        initWeaponsResponseObserve()
+        initWeaponsAdapterListObserve()
     }
 
     private fun initAdapter(){
-        weaponsAdapter = WeaponsAdapter(viewModel.getWeaponsAdapterList())
-        binding.weaponsRecyclerView.adapter = weaponsAdapter
+        viewModel.weaponsAdapterList.value?.let {
+            weaponsAdapter = WeaponsAdapter(it)
+            binding.weaponsRecyclerView.adapter = weaponsAdapter
+        }
     }
 
-    private fun initWeaponsResponseObserve(){
-        viewModel.weaponsResponseObserve.observe(viewLifecycleOwner){
+    private fun initWeaponsAdapterListObserve(){
+        viewModel.weaponsAdapterList.observe(viewLifecycleOwner){
             initAdapter()
-            viewModel.mapOnWeaponsResponse(it)
         }
     }
 
