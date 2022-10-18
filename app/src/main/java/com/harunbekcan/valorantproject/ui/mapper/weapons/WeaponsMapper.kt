@@ -7,8 +7,7 @@ import javax.inject.Inject
 
 open class WeaponsMapper @Inject constructor() {
 
-    private var weaponsAdapterList = ArrayList<WeaponsItem>()
-    fun getWeaponsAdapterList() = weaponsAdapterList
+    var weaponsAdapterList = ArrayList<WeaponsItem>()
 
     fun mapOnWeaponsResponse(weaponsResponse: WeaponsResponse){
         weaponsAdapterList.clear()
