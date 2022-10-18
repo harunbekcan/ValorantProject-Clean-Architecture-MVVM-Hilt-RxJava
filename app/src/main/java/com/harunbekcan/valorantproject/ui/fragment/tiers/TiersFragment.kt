@@ -18,18 +18,19 @@ class TiersFragment : BaseFragment<FragmentTiersBinding>() {
 
     override fun prepareView(savedInstanceState: Bundle?) {
         viewModel.tiersRequest()
-        initMapsResponseObserve()
+        initTiersAdapterListObserve()
     }
 
     private fun initAdapter(){
-        tiersAdapter = TiersAdapter(viewModel.getTiersAdapterList())
-        binding.tiersRecyclerView.adapter = tiersAdapter
+        viewModel.tiersAdapterList.value?.let {
+            tiersAdapter = TiersAdapter(it)
+            binding.tiersRecyclerView.adapter = tiersAdapter
+        }
     }
 
-    private fun initMapsResponseObserve(){
-        viewModel.tiersResponseObserve.observe(viewLifecycleOwner){
+    private fun initTiersAdapterListObserve(){
+        viewModel.tiersAdapterList.observe(viewLifecycleOwner){
             initAdapter()
-            viewModel.mapOnTiersResponse(it)
         }
     }
 }
