@@ -17,6 +17,8 @@ data class WeaponsResponseItem(
     val killStreamIcon: String,
     @SerializedName("skins")
     var skins: List<Skin>,
+    @SerializedName("shopData")
+    val shopData: ShopData,
     @SerializedName("uuid")
     val uuid: String,
     @SerializedName("weaponStats")
