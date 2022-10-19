@@ -2,6 +2,7 @@ package com.harunbekcan.valorantproject.ui.fragment.weapons
 
 import android.os.Bundle
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.harunbekcan.valorantproject.R
 import com.harunbekcan.valorantproject.base.BaseFragment
 import com.harunbekcan.valorantproject.databinding.FragmentWeaponsBinding
@@ -25,7 +26,7 @@ class WeaponsFragment : BaseFragment<FragmentWeaponsBinding>() {
         viewModel.weaponsAdapterList.value?.let { list->
             weaponsAdapter = WeaponsAdapter(list, itemClick = { weaponsItem->
                 weaponsItem.uuid?.let {
-                    WeaponsFragmentDirections.actionWeaponsFragmentToWeaponDetailFragment(it)
+                    findNavController().navigate(WeaponsFragmentDirections.actionWeaponsFragmentToWeaponDetailFragment(it))
                 }
             })
             binding.weaponsRecyclerView.adapter = weaponsAdapter

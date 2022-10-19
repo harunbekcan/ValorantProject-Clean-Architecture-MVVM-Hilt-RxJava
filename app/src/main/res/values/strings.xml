@@ -11,4 +11,8 @@
     <string name="special_abilities">Special Abilities</string>
     <string name="damage_range">Damage Range</string>
 
+    <string name="head_damage">Head - %.1f</string>
+    <string name="body_damage">Body - %1d</string>
+    <string name="leg_damage">Body - %.1f</string>
+
 </resources>
