@@ -7,7 +7,7 @@ import com.harunbekcan.valorantproject.data.uimodel.weapons.WeaponsItem
 import com.harunbekcan.valorantproject.databinding.ItemWeaponLayoutBinding
 import com.harunbekcan.valorantproject.utils.loadImage
 
-class WeaponsAdapter(private val weaponsAdapterList : ArrayList<WeaponsItem>): RecyclerView.Adapter<WeaponsAdapter.WeaponsViewHolder>() {
+class WeaponsAdapter(private val weaponsAdapterList : ArrayList<WeaponsItem>,private val itemClick: (WeaponsItem) -> Unit): RecyclerView.Adapter<WeaponsAdapter.WeaponsViewHolder>() {
 
     class WeaponsViewHolder(val binding: ItemWeaponLayoutBinding): RecyclerView.ViewHolder(binding.root)
 
@@ -20,6 +20,10 @@ class WeaponsAdapter(private val weaponsAdapterList : ArrayList<WeaponsItem>): R
         holder.binding.apply {
             weaponNameTextView.text = weaponsAdapterList[position].displayName
             weaponImageView.loadImage(weaponsAdapterList[position].displayIcon)
+
+            weaponCardView.setOnClickListener {
+                itemClick.invoke(weaponsAdapterList[position])
+            }
         }
     }
 

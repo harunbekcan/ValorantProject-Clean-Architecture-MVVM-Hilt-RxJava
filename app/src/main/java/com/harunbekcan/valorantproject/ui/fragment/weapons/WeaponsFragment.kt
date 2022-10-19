@@ -7,6 +7,7 @@ import com.harunbekcan.valorantproject.base.BaseFragment
 import com.harunbekcan.valorantproject.databinding.FragmentWeaponsBinding
 import com.harunbekcan.valorantproject.ui.adapter.weapons.WeaponsAdapter
 import dagger.hilt.android.AndroidEntryPoint
+import java.util.zip.ZipEntry
 
 @AndroidEntryPoint
 class WeaponsFragment : BaseFragment<FragmentWeaponsBinding>() {
@@ -22,8 +23,12 @@ class WeaponsFragment : BaseFragment<FragmentWeaponsBinding>() {
     }
 
     private fun initAdapter(){
-        viewModel.weaponsAdapterList.value?.let {
-            weaponsAdapter = WeaponsAdapter(it)
+        viewModel.weaponsAdapterList.value?.let { list->
+            weaponsAdapter = WeaponsAdapter(list, itemClick = { weaponsItem->
+                weaponsItem.uuid?.let {
+                    WeaponsFragmentDirections.actionWeaponsFragmentToWeaponDetailFragment(it)
+                }
+            })
             binding.weaponsRecyclerView.adapter = weaponsAdapter
         }
     }
