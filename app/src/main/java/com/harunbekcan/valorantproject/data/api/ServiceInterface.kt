@@ -25,7 +25,7 @@ interface ServiceInterface {
     fun getWeapons(): Single<WeaponsResponse>
 
     @GET("weapons/{weaponUuid}")
-    suspend fun getWeaponDetail(@Path("weaponUuid") weaponUuid: String): Single<WeaponDetailResponse>
+    fun getWeaponDetail(@Path("weaponUuid") weaponUuid: String): Single<WeaponDetailResponse>
 
     @GET("competitivetiers")
     fun getTiers(): Single<TiersResponse>
