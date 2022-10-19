@@ -4,6 +4,7 @@ import com.harunbekcan.valorantproject.data.response.agents.AgentDetailResponse
 import com.harunbekcan.valorantproject.data.response.agents.AgentsResponse
 import com.harunbekcan.valorantproject.data.response.maps.MapsResponse
 import com.harunbekcan.valorantproject.data.response.tiers.TiersResponse
+import com.harunbekcan.valorantproject.data.response.weapons.WeaponDetailResponse
 import com.harunbekcan.valorantproject.data.response.weapons.WeaponsResponse
 import io.reactivex.rxjava3.core.Single
 import retrofit2.http.GET
@@ -22,6 +23,9 @@ interface ServiceInterface {
 
     @GET("weapons")
     fun getWeapons(): Single<WeaponsResponse>
+
+    @GET("weapons/{weaponUuid}")
+    suspend fun getWeaponDetail(@Path("weaponUuid") weaponUuid: String): Single<WeaponDetailResponse>
 
     @GET("competitivetiers")
     fun getTiers(): Single<TiersResponse>
