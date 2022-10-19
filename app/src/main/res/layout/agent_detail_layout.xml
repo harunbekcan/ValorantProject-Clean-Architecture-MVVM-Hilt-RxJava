@@ -11,12 +11,8 @@
     android:layout_height="wrap_content"
     tools:background="@color/dark_blue">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/agentInfoCardView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/agentInfoContainer"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/dark_blue">
@@ -66,7 +62,6 @@
                 tools:text="Initiator" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
 
     <TextView
         android:id="@+id/descriptionTitleTextView"
@@ -79,7 +74,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/agentInfoCardView" />
+        app:layout_constraintTop_toBottomOf="@+id/agentInfoContainer" />
 
     <TextView
         android:id="@+id/descriptionTextView"

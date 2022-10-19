@@ -7,7 +7,6 @@ import com.harunbekcan.valorantproject.base.BaseFragment
 import com.harunbekcan.valorantproject.databinding.FragmentWeaponsBinding
 import com.harunbekcan.valorantproject.ui.adapter.weapons.WeaponsAdapter
 import dagger.hilt.android.AndroidEntryPoint
-import java.util.zip.ZipEntry
 
 @AndroidEntryPoint
 class WeaponsFragment : BaseFragment<FragmentWeaponsBinding>() {

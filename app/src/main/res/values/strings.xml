@@ -9,6 +9,6 @@
     <string name="tiers">Tiers</string>
     <string name="description">Description</string>
     <string name="special_abilities">Special Abilities</string>
-
+    <string name="damage_range">Damage Range</string>
 
 </resources>
