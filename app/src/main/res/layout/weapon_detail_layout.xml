@@ -166,16 +166,29 @@
             app:layout_constraintTop_toBottomOf="@+id/legDamageTextView"
             tools:progress="24"/>
 
+        <TextView
+            android:id="@+id/skinsTitleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:textStyle="bold"
+            android:text="@string/skins"
+            android:textAlignment="center"
+            android:textColor="@color/red"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/legProgressBar" />
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/skinsRecyclerView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
             android:clipToPadding="false"
             android:paddingBottom="16dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             android:orientation="horizontal"
-            app:layout_constraintTop_toBottomOf="@+id/legProgressBar"
+            app:layout_constraintTop_toBottomOf="@+id/skinsTitleTextView"
             app:layout_constraintBottom_toBottomOf="parent"
             tools:listitem="@layout/item_skin_layout"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
