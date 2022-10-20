@@ -21,7 +21,7 @@
                 android:id="@+id/weaponIconImageView"
                 android:layout_width="match_parent"
                 android:layout_height="320dp"
-                android:background="@color/red"
+                android:background="@color/light_blue"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
