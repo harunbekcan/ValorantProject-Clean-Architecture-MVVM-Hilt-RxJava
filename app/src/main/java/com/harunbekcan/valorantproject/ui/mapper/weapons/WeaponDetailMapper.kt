@@ -5,6 +5,8 @@ import com.harunbekcan.valorantproject.data.response.weapons.WeaponsResponseItem
 import com.harunbekcan.valorantproject.data.uimodel.weapons.DamageRangeItem
 import com.harunbekcan.valorantproject.data.uimodel.weapons.SkinItem
 import com.harunbekcan.valorantproject.data.uimodel.weapons.WeaponDetailItem
+import com.harunbekcan.valorantproject.utils.Constants.RANDOM_FAVORITE_SKIN
+import com.harunbekcan.valorantproject.utils.Constants.STANDARD
 import javax.inject.Inject
 
 open class WeaponDetailMapper @Inject constructor() {
@@ -49,12 +51,14 @@ open class WeaponDetailMapper @Inject constructor() {
     private fun skinListConvertToModel(weaponsResponseItem: WeaponsResponseItem): ArrayList<SkinItem> {
         val skinList = arrayListOf<SkinItem>()
         weaponsResponseItem.skins.forEach { item ->
-            skinList.add(
-                SkinItem(
-                    item.displayIcon,
-                    item.displayName
+            if (item.displayIcon.isNullOrEmpty().not() && item.displayName.contains(STANDARD).not() && item.displayName.contains(RANDOM_FAVORITE_SKIN).not()) {
+                skinList.add(
+                    SkinItem(
+                        item.displayIcon,
+                        item.displayName
+                    )
                 )
-            )
+            }
         }
         return skinList
     }

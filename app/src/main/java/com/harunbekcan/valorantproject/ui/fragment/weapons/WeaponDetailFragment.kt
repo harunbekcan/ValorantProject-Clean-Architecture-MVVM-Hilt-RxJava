@@ -8,6 +8,7 @@ import com.harunbekcan.valorantproject.R
 import com.harunbekcan.valorantproject.base.BaseFragment
 import com.harunbekcan.valorantproject.data.uimodel.weapons.WeaponDetailItem
 import com.harunbekcan.valorantproject.databinding.FragmentWeaponDetailBinding
+import com.harunbekcan.valorantproject.ui.adapter.weapons.SkinsAdapter
 import com.harunbekcan.valorantproject.utils.loadImage
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -16,6 +17,7 @@ class WeaponDetailFragment : BaseFragment<FragmentWeaponDetailBinding>() {
 
     private val viewModel : WeaponDetailViewModel by viewModels()
     private val navArgs : WeaponDetailFragmentArgs by navArgs()
+    private lateinit var skinsAdapter: SkinsAdapter
 
     override fun getLayoutId(): Int = R.layout.fragment_weapon_detail
 
@@ -38,7 +40,7 @@ class WeaponDetailFragment : BaseFragment<FragmentWeaponDetailBinding>() {
                 weaponNameTextView.text = item.weaponName
                 weaponCategoryTextView.text = item.weaponCategory
                 setProgressBar(item)
-
+                initSkinsAdapter(item)
             }
         }
     }
@@ -63,6 +65,13 @@ class WeaponDetailFragment : BaseFragment<FragmentWeaponDetailBinding>() {
                     }
                 }
             }
+        }
+    }
+
+    private fun initSkinsAdapter(weaponDetailItem: WeaponDetailItem){
+        weaponDetailItem.skinList?.let {
+            skinsAdapter = SkinsAdapter(it)
+            binding.weaponDetailLayout.skinsRecyclerView.adapter = skinsAdapter
         }
     }
 
