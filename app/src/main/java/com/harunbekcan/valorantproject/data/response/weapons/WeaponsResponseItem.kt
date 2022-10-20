@@ -18,9 +18,9 @@ data class WeaponsResponseItem(
     @SerializedName("skins")
     var skins: List<Skin>,
     @SerializedName("shopData")
-    val shopData: ShopData,
+    val shopData: ShopData?,
     @SerializedName("uuid")
     val uuid: String,
     @SerializedName("weaponStats")
-    val weaponStats: WeaponStats
+    val weaponStats: WeaponStats?
 )

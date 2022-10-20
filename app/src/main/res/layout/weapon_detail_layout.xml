@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/dark_blue">
+    android:layout_height="match_parent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -14,8 +13,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/weaponInfoContainer"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/dark_blue">
+            android:layout_height="match_parent">
 
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/weaponIconImageView"
@@ -63,6 +61,12 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/damageRangeContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/weaponInfoContainer">
+
         <TextView
             android:id="@+id/damageRangeTextView"
             android:layout_width="match_parent"
@@ -75,7 +79,7 @@
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/weaponInfoContainer" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/headDamageTextView"
@@ -166,6 +170,8 @@
             app:layout_constraintTop_toBottomOf="@+id/legDamageTextView"
             tools:progress="24"/>
 
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
         <TextView
             android:id="@+id/skinsTitleTextView"
             android:layout_width="match_parent"
@@ -178,7 +184,7 @@
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/legProgressBar" />
+            app:layout_constraintTop_toBottomOf="@+id/damageRangeContainer" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/skinsRecyclerView"

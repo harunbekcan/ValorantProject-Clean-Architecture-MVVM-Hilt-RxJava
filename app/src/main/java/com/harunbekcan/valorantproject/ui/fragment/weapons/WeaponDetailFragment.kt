@@ -10,6 +10,7 @@ import com.harunbekcan.valorantproject.data.uimodel.weapons.WeaponDetailItem
 import com.harunbekcan.valorantproject.databinding.FragmentWeaponDetailBinding
 import com.harunbekcan.valorantproject.ui.adapter.weapons.SkinsAdapter
 import com.harunbekcan.valorantproject.utils.loadImage
+import com.harunbekcan.valorantproject.utils.setGone
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -33,33 +34,38 @@ class WeaponDetailFragment : BaseFragment<FragmentWeaponDetailBinding>() {
         }
     }
 
-    private fun initUi(weaponDetailItem: WeaponDetailItem){
+    private fun initUi(weaponDetailItem: WeaponDetailItem?){
         binding.weaponDetailLayout.apply {
-            weaponDetailItem.let { item->
+            weaponDetailItem?.let { item->
+                initSkinsAdapter(item)
                 weaponIconImageView.loadImage(item.weaponIcon)
                 weaponNameTextView.text = item.weaponName
                 weaponCategoryTextView.text = item.weaponCategory
-                setProgressBar(item)
-                initSkinsAdapter(item)
+
+                if (weaponDetailItem.weaponCategory.isNullOrEmpty().not()){
+                    setProgressBar(item)
+                } else {
+                    damageRangeContainer.setGone()
+                }
             }
         }
     }
 
-    private fun setProgressBar(weaponDetailItem: WeaponDetailItem){
+    private fun setProgressBar(weaponDetailItem: WeaponDetailItem?){
         binding.weaponDetailLayout.apply {
-            weaponDetailItem.let { item->
-                item.damageRangeList?.get(0).let {
-                    it?.headDamage?.let { headDamage->
+            weaponDetailItem?.let { item->
+                item.damageRangeList?.get(0)?.let {
+                    it.headDamage?.let { headDamage->
                         headProgressBar.progress = headDamage.toInt()
                         headDamageTextView.text = getString(R.string.head_damage,it.headDamage)
                     }
 
-                    it?.bodyDamage?.let { bodyDamage->
+                    it.bodyDamage?.let { bodyDamage->
                         bodyProgressBar.progress = bodyDamage
                         bodyDamageTextView.text = getString(R.string.body_damage,it.bodyDamage)
                     }
 
-                    it?.legDamage?.let { legDamage->
+                    it.legDamage?.let { legDamage->
                         legProgressBar.progress = legDamage.toInt()
                         legDamageTextView.text = getString(R.string.leg_damage,it.legDamage)
                     }
@@ -68,8 +74,8 @@ class WeaponDetailFragment : BaseFragment<FragmentWeaponDetailBinding>() {
         }
     }
 
-    private fun initSkinsAdapter(weaponDetailItem: WeaponDetailItem){
-        weaponDetailItem.skinList?.let {
+    private fun initSkinsAdapter(weaponDetailItem: WeaponDetailItem?){
+        weaponDetailItem?.skinList?.let {
             skinsAdapter = SkinsAdapter(it)
             binding.weaponDetailLayout.skinsRecyclerView.adapter = skinsAdapter
         }

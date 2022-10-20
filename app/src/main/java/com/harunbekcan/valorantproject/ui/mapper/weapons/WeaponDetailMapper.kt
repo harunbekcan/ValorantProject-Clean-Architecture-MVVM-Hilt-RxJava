@@ -5,7 +5,6 @@ import com.harunbekcan.valorantproject.data.response.weapons.WeaponsResponseItem
 import com.harunbekcan.valorantproject.data.uimodel.weapons.DamageRangeItem
 import com.harunbekcan.valorantproject.data.uimodel.weapons.SkinItem
 import com.harunbekcan.valorantproject.data.uimodel.weapons.WeaponDetailItem
-import com.harunbekcan.valorantproject.utils.Constants.RANDOM_FAVORITE_SKIN
 import com.harunbekcan.valorantproject.utils.Constants.STANDARD
 import javax.inject.Inject
 
@@ -22,7 +21,7 @@ open class WeaponDetailMapper @Inject constructor() {
             weaponsResponseItem.displayName.let { displayName -> this.weaponName = displayName }
             weaponsResponseItem.uuid.let { uuid -> this.uuid = uuid }
             weaponsResponseItem.displayIcon.let { uuid -> this.weaponIcon = uuid }
-            weaponsResponseItem.shopData.categoryText.let { categoryText -> this.weaponCategory = categoryText }
+            weaponsResponseItem.shopData?.categoryText.let { categoryText -> this.weaponCategory = categoryText }
             damageRangeList = damageListConvertToModel(weaponsResponseItem)
             skinList = skinListConvertToModel(weaponsResponseItem)
         }
@@ -36,7 +35,7 @@ open class WeaponDetailMapper @Inject constructor() {
 
     private fun damageListConvertToModel(weaponsResponseItem: WeaponsResponseItem): ArrayList<DamageRangeItem> {
         val damageList = arrayListOf<DamageRangeItem>()
-        weaponsResponseItem.weaponStats.damageRanges.forEach { damageRange ->
+        weaponsResponseItem.weaponStats?.damageRanges?.forEach { damageRange ->
             damageList.add(
                 DamageRangeItem(
                     damageRange.headDamage,
@@ -51,7 +50,7 @@ open class WeaponDetailMapper @Inject constructor() {
     private fun skinListConvertToModel(weaponsResponseItem: WeaponsResponseItem): ArrayList<SkinItem> {
         val skinList = arrayListOf<SkinItem>()
         weaponsResponseItem.skins.forEach { item ->
-            if (item.displayIcon.isNullOrEmpty().not() && item.displayName.contains(STANDARD).not() && item.displayName.contains(RANDOM_FAVORITE_SKIN).not()) {
+            if (item.displayIcon.isNullOrEmpty().not() && item.displayName.contains(STANDARD).not()) {
                 skinList.add(
                     SkinItem(
                         item.displayIcon,
