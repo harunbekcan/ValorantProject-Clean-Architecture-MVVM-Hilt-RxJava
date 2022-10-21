@@ -5,7 +5,14 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/dark_blue">
+
+        <include
+            android:id="@+id/weaponDetailLayout"
+            layout="@layout/map_detail_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
