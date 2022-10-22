@@ -2,6 +2,7 @@ package com.harunbekcan.valorantproject.data.api
 
 import com.harunbekcan.valorantproject.data.response.agents.AgentDetailResponse
 import com.harunbekcan.valorantproject.data.response.agents.AgentsResponse
+import com.harunbekcan.valorantproject.data.response.maps.MapDetailResponse
 import com.harunbekcan.valorantproject.data.response.maps.MapsResponse
 import com.harunbekcan.valorantproject.data.response.tiers.TiersResponse
 import com.harunbekcan.valorantproject.data.response.weapons.WeaponDetailResponse
@@ -20,6 +21,9 @@ interface ServiceInterface {
 
     @GET("maps")
     fun getMaps(): Single<MapsResponse>
+
+    @GET("maps/{mapUuid}")
+    fun getMapDetail(@Path("mapUuid") mapUuid: String): MapDetailResponse
 
     @GET("weapons")
     fun getWeapons(): Single<WeaponsResponse>
