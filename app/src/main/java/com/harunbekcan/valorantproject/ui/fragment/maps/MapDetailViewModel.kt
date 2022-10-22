@@ -4,7 +4,6 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.harunbekcan.valorantproject.data.uimodel.maps.MapDetailItem
-import com.harunbekcan.valorantproject.data.uimodel.weapons.WeaponDetailItem
 import com.harunbekcan.valorantproject.data.usecase.maps.MapDetailUseCase
 import com.harunbekcan.valorantproject.ui.mapper.maps.MapDetailMapper
 import dagger.hilt.android.lifecycle.HiltViewModel
