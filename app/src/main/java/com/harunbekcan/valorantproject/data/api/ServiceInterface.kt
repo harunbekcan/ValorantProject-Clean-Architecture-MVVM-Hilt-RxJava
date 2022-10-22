@@ -23,7 +23,7 @@ interface ServiceInterface {
     fun getMaps(): Single<MapsResponse>
 
     @GET("maps/{mapUuid}")
-    fun getMapDetail(@Path("mapUuid") mapUuid: String): MapDetailResponse
+    fun getMapDetail(@Path("mapUuid") mapUuid: String): Single<MapDetailResponse>
 
     @GET("weapons")
     fun getWeapons(): Single<WeaponsResponse>
