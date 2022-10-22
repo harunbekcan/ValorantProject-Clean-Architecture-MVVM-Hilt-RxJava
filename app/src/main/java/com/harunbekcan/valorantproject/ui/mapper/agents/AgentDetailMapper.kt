@@ -16,9 +16,7 @@ open class AgentDetailMapper @Inject constructor() {
 
     private fun agentDetailResponseConvertToModel(agentDetailResponseItem: AgentsResponseItem): AgentDetailItem {
         return AgentDetailItem().apply {
-            agentDetailResponseItem.description.let { description ->
-                this.agentDescription = description
-            }
+            agentDetailResponseItem.description.let { description -> this.agentDescription = description }
             agentDetailResponseItem.displayName.let { displayName -> this.agentName = displayName }
             agentDetailResponseItem.bustPortrait.let { agentIcon -> this.agentIcon = agentIcon }
             agentDetailResponseItem.role?.displayName?.let { roleName -> this.roleName = roleName }
