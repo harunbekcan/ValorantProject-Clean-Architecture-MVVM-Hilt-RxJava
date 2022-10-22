@@ -7,7 +7,7 @@ import com.harunbekcan.valorantproject.data.uimodel.maps.MapsItem
 import com.harunbekcan.valorantproject.databinding.ItemMapLayoutBinding
 import com.harunbekcan.valorantproject.utils.loadImage
 
-class MapsAdapter(private val mapsAdapterList : ArrayList<MapsItem>): RecyclerView.Adapter<MapsAdapter.MapsViewHolder>() {
+class MapsAdapter(private val mapsAdapterList : ArrayList<MapsItem>,private val itemClick: (MapsItem) -> Unit): RecyclerView.Adapter<MapsAdapter.MapsViewHolder>() {
 
     class MapsViewHolder(val binding: ItemMapLayoutBinding): RecyclerView.ViewHolder(binding.root)
 
@@ -20,6 +20,10 @@ class MapsAdapter(private val mapsAdapterList : ArrayList<MapsItem>): RecyclerVi
         holder.binding.apply {
             mapNameTextView.text = mapsAdapterList[position].displayName
             mapImageView.loadImage(mapsAdapterList[position].mapIcon)
+
+            mapCardView.setOnClickListener {
+                itemClick.invoke(mapsAdapterList[position])
+            }
         }
     }
 

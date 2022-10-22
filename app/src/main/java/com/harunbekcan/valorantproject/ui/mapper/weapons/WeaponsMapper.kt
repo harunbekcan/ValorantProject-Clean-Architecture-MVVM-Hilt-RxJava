@@ -18,7 +18,7 @@ open class WeaponsMapper @Inject constructor() {
         return WeaponsItem().apply {
             weaponsResponseItem.displayIcon.let { displayIcon-> this.displayIcon = displayIcon }
             weaponsResponseItem.displayName.let { displayName-> this.displayName = displayName }
-            weaponsResponseItem.uuid.let { displayName-> this.uuid = displayName }
+            weaponsResponseItem.uuid.let { uuid-> this.uuid = uuid }
         }
     }
 

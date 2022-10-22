@@ -2,6 +2,7 @@ package com.harunbekcan.valorantproject.ui.fragment.maps
 
 import android.os.Bundle
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.harunbekcan.valorantproject.R
 import com.harunbekcan.valorantproject.base.BaseFragment
 import com.harunbekcan.valorantproject.databinding.FragmentMapsBinding
@@ -23,7 +24,11 @@ class MapsFragment : BaseFragment<FragmentMapsBinding>() {
 
     private fun initAdapter(){
         viewModel.mapsAdapterList.value?.let {
-            mapsAdapter = MapsAdapter(it)
+            mapsAdapter = MapsAdapter(it, itemClick = { item->
+                item.uuid?.let { uuid->
+                    findNavController().navigate(MapsFragmentDirections.actionMapsFragmentToMapDetailFragment(uuid))
+                }
+            })
             binding.mapsRecyclerView.adapter = mapsAdapter
         }
     }

@@ -18,6 +18,7 @@ open class MapsMapper @Inject constructor() {
         return MapsItem().apply {
             mapsResponseItem.splash.let { mapIcon-> this.mapIcon = mapIcon }
             mapsResponseItem.displayName.let { displayName-> this.displayName = displayName }
+            mapsResponseItem.uuid.let { uuid-> this.uuid = uuid }
         }
     }
 
