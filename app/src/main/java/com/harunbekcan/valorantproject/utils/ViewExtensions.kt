@@ -17,6 +17,6 @@ fun View.setVisible(){
 fun ImageView.loadImage(imageUrl: String?) {
     Glide.with(this.context)
         .load(imageUrl)
-        .error(R.drawable.ic_launcher_background)
+        .error(R.color.dark_blue)
         .into(this)
 }
