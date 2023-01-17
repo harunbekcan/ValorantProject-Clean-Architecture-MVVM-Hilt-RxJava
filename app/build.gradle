@@ -44,12 +44,12 @@ android {
 dependencies {
 
     implementation 'androidx.core:core-ktx:1.7.0'
-    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'androidx.appcompat:appcompat:1.6.0'
     implementation 'com.google.android.material:material:1.7.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.4'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
     //Retrofit
     def retrofitVersion = "2.9.0"
@@ -58,7 +58,7 @@ dependencies {
 
     //OkHttp
     implementation 'com.squareup.okhttp3:okhttp:5.0.0-alpha.3'
-    implementation 'com.google.code.gson:gson:2.9.1'
+    implementation 'com.google.code.gson:gson:2.10'
     implementation 'com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.3'
 
     //rx-java
@@ -67,13 +67,13 @@ dependencies {
     implementation 'com.squareup.retrofit2:adapter-rxjava3:2.9.0'
 
     //Hilt
-    def hiltVersion = "2.43.2"
+    def hiltVersion = "2.44.2"
     implementation "com.google.dagger:hilt-android:$hiltVersion"
     kapt "com.google.dagger:hilt-android-compiler:$hiltVersion"
     kapt "androidx.hilt:hilt-compiler:1.0.0"
 
     //Glide
-    def glideVersion = "4.13.2"
+    def glideVersion = "4.14.2"
     implementation "com.github.bumptech.glide:glide:$glideVersion"
     kapt "com.github.bumptech.glide:compiler:$glideVersion"
 
